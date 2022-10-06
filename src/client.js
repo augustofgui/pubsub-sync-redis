@@ -19,7 +19,7 @@ const printQueue = () => {
   const resultado = await database.sync();
 
   const subscriber = redis.createClient({
-    host: "10.30.219.35",
+    socket: { host: "10.30.219.35" },
   });
   const publisher = subscriber.duplicate();
 
