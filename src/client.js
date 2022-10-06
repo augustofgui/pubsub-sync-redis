@@ -62,8 +62,8 @@ const printQueue = () => {
       printQueue();
     } else if (json.command == "current" && json.id == clientId) {
       console.log("\n\x1b[35m%s\x1b[0m\x1b", "Recived the current queue...");
-      printQueue();
       queue.push(...json.queue);
+      printQueue();
     } else if (
       json.command == "sync" &&
       queue[0] == clientId &&
