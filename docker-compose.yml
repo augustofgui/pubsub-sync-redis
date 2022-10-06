@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  rcli:
+    container_name: rcli
+    image: redis:latest
+    links:
+      - redis
+    command: redis-cli -h redis
+
+  db:
+    image: postgres:latest
+    container_name: db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ${PGPASSWORD}
+      POSTGRES_USERNAME: ${PGUSERNAME}
+      POSTGRES_DB: ${PGDB}

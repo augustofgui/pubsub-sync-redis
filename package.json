@@ -1,0 +1,19 @@
+{
+  "name": "pub-sub-redis-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./src/client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "redis": "^4.3.1",
+    "sequelize": "^6.24.0"
+  }
+}
