@@ -19,7 +19,8 @@ const printQueue = () => {
   const resultado = await database.sync();
 
   const subscriber = redis.createClient({
-    socket: { host: "10.30.219.35" },
+    socket: { host: "containers-us-west-39.railway.app", port: 7369 },
+    password: "gBsfV4qEBihL8i2iVIlr",
   });
   const publisher = subscriber.duplicate();
 
